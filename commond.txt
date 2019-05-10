@@ -1,0 +1,43 @@
+生成.lst:  python tools/im2rec.py --recursive --exts=.png --list /home/heisai/Heisai/face/mylist /home/heisai/Heisai/face/
+
+生成.rec: (使用Python2) python face2rec2.py /home/heisai/Pictures/output/
+python tools/im2rec.py --num-thread=8 /home/heisai/Pictures/demo.lst /home/heisai/Pictures/test_image
+
+
+常用命令：unset all_proxy && unset ALL_PROXY
+
+
+放在同一个文件夹内
+
+0a0de8d3-c159-4d06-85a1-cc86d7544906_00001.png
+
+autossh -NfR 22001:0.0.0.0:22 root@120.79.5.223
+
+
+CUDA_VISIBLE_DEVICES='0,1' python -u train_softmax.py --prefix ../models/model-y1-test2/ --loss-type 4 --data-dir ../datasets/faces_emore/ --per-batch-size 32
+
+
+预训练模型slim：python model_slim.py		
+
+
+
+
+ python glint2lst.py /home/heisai/Heisai/insightface/src/data/glint_data celebrity > glint_cn.lst
+
+
+import facenet.src.facenet as facenet
+import facenet.src.align.detect_face as detect_face
+
+
+python face2rec2.py /home/heisai/Pictures/output/
+
+
+fine-tune
+CUDA_VISIBLE_DEVICES='0,1' python -u train.py --dataset emore --loss arcface --network y1 --pretrained ../models/model-y1-test2/models --per-batch-size 32 --lr-steps '10000,60000,100000' --lr 0.01
+
+#连接ftp
+lftp anonymous@192.168.0.108   password:heisai
+
+
+
+
