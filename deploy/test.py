@@ -17,8 +17,9 @@ args = parser.parse_args()
 
 model = face_model.FaceModel(args)
 img = cv2.imread('Tom_Hanks_54745.png')
+# 对图片进行mtrcnn检测对齐
 img = model.get_input(img)
-#f1 = model.get_feature(img)
+f1 = model.get_feature(img)
 #print(f1[0:10])
 gender, age = model.get_ga(img)
 print(gender)
