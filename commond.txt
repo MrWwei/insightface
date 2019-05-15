@@ -1,4 +1,4 @@
-生成.lst:  python tools/im2rec.py --recursive --exts=.png --list /home/heisai/Heisai/face/mylist /home/heisai/Heisai/face/
+生成.lst:  python align_dataset_mtcnn.py /home/heisai/Pictures/test/ /home/heisai/Pictures/output/ --image_size 112
 
 生成.rec: (使用Python2) python face2rec2.py /home/heisai/Pictures/output/
 python tools/im2rec.py --num-thread=8 /home/heisai/Pictures/demo.lst /home/heisai/Pictures/test_image
@@ -14,8 +14,9 @@ python tools/im2rec.py --num-thread=8 /home/heisai/Pictures/demo.lst /home/heisa
 autossh -NfR 22001:0.0.0.0:22 root@120.79.5.223
 
 
-CUDA_VISIBLE_DEVICES='0,1' python -u train_softmax.py --prefix ../models/model-y1-test2/ --loss-type 4 --data-dir ../datasets/faces_emore/ --per-batch-size 32
+训练：CUDA_VISIBLE_DEVICES='0,1' python -u train_softmax.py --lr 0.01 --prefix ../models/model-y1-test2/ --ckpt 2 --loss-type 4 --data-dir ../datasets/faces_emore/ --per-batch-size 32
 
+制作bin验证集：（python2.7）python lfw2pack.py --data-dir /home/heisai/Desktop/tools/ --output /home/heisai/Desktop/tools/ver.bin
 
 预训练模型slim：python model_slim.py		
 
@@ -37,7 +38,6 @@ CUDA_VISIBLE_DEVICES='0,1' python -u train.py --dataset emore --loss arcface --n
 
 #连接ftp
 lftp anonymous@192.168.0.108   password:heisai
-
 
 
 
