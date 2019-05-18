@@ -204,7 +204,9 @@ def load_bin(path, image_size):
 
 def test(data_set, mx_model, batch_size, nfolds=10, data_extra = None, label_shape = None):
   print('testing verification..')
+  #data_list:[[pic1,pic2],[pic3,pic4],....[pic n,pic m]]
   data_list = data_set[0]
+  #issame_list:[true,false,...,true]
   issame_list = data_set[1]
   model = mx_model
   embeddings_list = []
@@ -216,6 +218,7 @@ def test(data_set, mx_model, batch_size, nfolds=10, data_extra = None, label_sha
   else:
     _label = nd.ones( label_shape )
   for i in xrange( len(data_list) ):
+    #data:[pic1,pic2]
     data = data_list[i]
     embeddings = None
     ba = 0
