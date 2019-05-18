@@ -18,7 +18,7 @@ autossh -NfR 22001:0.0.0.0:22 root@120.79.5.223
 
 
 训练：CUDA_VISIBLE_DEVICES='0,1' python -u train_softmax.py --lr 0.01 --prefix ../models/model-y1-test2/ --ckpt 2 --loss-type 4 --data-dir ../datasets/faces_emore/ --per-batch-size 32
-
+CUDA_VISIBLE_DEVICES='0' python -u train_softmax.py --lr 0.1 --pretrained ../model/model,10 --ckpt 2 --loss-type 4 --data-dir ../datasets/faces_emore/ --per-batch-size 128
 制作bin验证集：（python2.7）python lfw2pack.py --data-dir /home/heisai/Desktop/tools/ --output /home/heisai/Desktop/tools/ver.bin
 
 预训练模型slim：python model_slim.py		
