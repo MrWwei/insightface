@@ -42,5 +42,10 @@ CUDA_VISIBLE_DEVICES='0,1' python -u train.py --dataset emore --loss arcface --n
 #连接ftp
 lftp anonymous@192.168.0.108   password:heisai
 
+mxnet转caffe
+python json2prototxt.py --mx-json model_mxnet/model-symbol.json --cf-prototxt model_caffe/insightface.prototxt
+
+python mxnet2caffe.py --mx-model model_mxnet/model --cf-prototxt model_caffe/insightface.prototxt --cf-model model_caffe/insightface.caffemodel
+
 
 
