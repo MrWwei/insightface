@@ -1,5 +1,5 @@
 训练集制作
-生成.lst:  python align_dataset_mtcnn.py /home/heisai/Pictures/test/ /home/heisai/Pictures/output/ --image_size 112
+生成.lst:  (python3.6)python align_dataset_mtcnn.py /home/heisai/Pictures/test/ /home/heisai/Pictures/output/ --image_size 112
 
 生成.rec: (使用Python2) python face2rec2.py /home/heisai/Pictures/output/
 python tools/im2rec.py --num-thread=8 /home/heisai/Pictures/demo.lst /home/heisai/Pictures/test_image
