@@ -55,3 +55,7 @@ python classify.py /home/heisai/00a2a2f5-ca8d-433e-ba35-c08fd52e7d86_00001.png /
 
 https://pan.baidu.com/s/1Ar9334MPeIV1eq4pM1eI-Q
 
+挂载
+sudo mount.cifs //192.168.0.108/e sambashare/ -o user=HEISAI-FMS    
+HeisAI33355577
+
