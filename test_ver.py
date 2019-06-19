@@ -6,7 +6,9 @@ import numpy as np
 from sklearn import preprocessing
 import codecs
 from tqdm import tqdm
-
+'''
+读取bin得到特征，探测库与底库，far、frr、roc
+'''
 reg_dir = sys.argv[1]
 rec_dir = sys.argv[2]
 feature_dim = int(sys.argv[3])
